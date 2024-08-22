@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './MyTabs.css';
 
 function MyTabs() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -8,16 +9,19 @@ function MyTabs() {
   };
 
   return (
-    <div>
-      <div>
-        <button onClick={() => handleTabClick("tab1")}>Tab 1</button>
-        <button onClick={() => handleTabClick("tab2")}>Tab 2</button>
-        <button onClick={() => handleTabClick("tab3")}>Tab 3</button>
+    <div className="tab-container">
+      <h1>tabs Component with react</h1>
+      <div className="tab-list">
+        <button className={`tab-link ${activeTab === 'tab1' ? 'active' : ''}`} onClick={() => handleTabClick('tab1')}>Tab 1</button>
+        <button className={`tab-link ${activeTab === 'tab2' ? 'active' : ''}`} onClick={() => handleTabClick('tab2')}>Tab 2</button>
+        <button className={`tab-link ${activeTab === 'tab3' ? 'active' : ''}`} onClick={() => handleTabClick('tab3')}>Tab 3</button>
+        <button className={`tab-link ${activeTab === 'tab4' ? 'active' : ''}`} onClick={() => handleTabClick('tab4')}>Tab 4</button>
       </div>
-      <div>
-        {activeTab === "tab1" && <p>محتوای تب اول</p>}
-        {activeTab === "tab2" && <p>محتوای تب دوم</p>}
-        {activeTab === "tab3" && <p>محتوای تب سوم</p>}
+      <div className="tab-content">
+        {activeTab === 'tab1' && <h2>Content 1</h2>}
+        {activeTab === 'tab2' && <h2>Content 2</h2>}
+        {activeTab === 'tab3' && <h2>Content 3</h2>}
+        {activeTab === 'tab4' && <h2>Content 4</h2>}
       </div>
     </div>
   );
