@@ -2,10 +2,11 @@ import { useState } from "react";
 import './MyTabs.css';
 
 function MyTabs() {
-  const [activeTab, setActiveTab] = useState("tab1");
+  const [activeTab, setActiveTab] = useState(()=>localStorage.getItem('activeTab') || "tab1");
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
+    localStorage.setItem('activeTab', tabId);
   };
 
   return (
