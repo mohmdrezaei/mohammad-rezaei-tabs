@@ -22,6 +22,11 @@ function MyTabs() {
         {activeTab === 'tab2' && <h2>Content 2</h2>}
         {activeTab === 'tab3' && <h2>Content 3</h2>}
         {activeTab === 'tab4' && <h2>Content 4</h2>}
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Deleniti similique natus sed blanditiis. Nam quibusdam soluta, 
+            fugiat a reiciendis molestiae inventore. Doloremque totam
+             praesentium sequi nam veniam aut provident atque.
+             </p>
       </div>
     </div>
   );
