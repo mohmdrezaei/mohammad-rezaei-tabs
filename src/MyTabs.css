@@ -24,7 +24,9 @@ body {
   overflow: hidden;
   box-shadow: 16px 16px 48px #2e364330;
   margin: auto;
+ 
 }
+
 
 .tab-container h1 {
   margin-left: 20px;
@@ -32,6 +34,8 @@ body {
 
 .tab-list {
   display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .tab-link {
@@ -86,4 +90,16 @@ body {
 
 .delete-button:hover{
   background-color: #96989c4e;
+}
+
+@media (max-width: 768px) {
+  .tab-container {
+    width:  450px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-container {
+    width:  350px; 
+  }
 }
