@@ -1,6 +1,5 @@
 import MyTabs from "./MyTabs";
 
-
 function App() {
   return (
     <>

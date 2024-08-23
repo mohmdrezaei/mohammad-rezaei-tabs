@@ -15,6 +15,9 @@ function MyTabs() {
   };
 
   const handleAddTab = () => {
+    if (tabs.length === 14){
+      return alert("نمی توانید بیشتر از 14 برگه ایجاد کنید")
+    }
     const maxId = tabs.reduce((max, tab) => Math.max(max, JSON.parse(tab.replace("Tab", ""), 10)),0);
     const newTabId = `Tab${maxId + 1}`;
     const updatedTabs = [...tabs, newTabId];
